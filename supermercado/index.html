@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Supermercado Olavarria</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+		/>
+	</head>
+	<body>
+		<header>
+			<nav class="barra-navegacion">
+				<h1 class="titulo-principal">
+					Supermercado <span>OLAVARRIA</span>
+				</h1>
+				<ul class="barra-navegacion-menu">
+					<li>
+						<button class="boton-menu active">Inicio</button>
+					</li>
+					<li class="submenu">
+						<button class="boton-menu">Alimentos</button>
+						<ul class="sub-menu">
+							<li>
+								<button
+									class="btn-categoria"
+									data-categoria="frutas"
+								>
+									Frutas
+								</button>
+							</li>
+							<li>
+								<button
+									class="btn-categoria"
+									data-categoria="verduras"
+								>
+									Verduras
+								</button>
+							</li>
+							<li>
+								<button
+									class="btn-categoria"
+									data-categoria="carnes"
+								>
+									Carnes
+								</button>
+							</li>
+							<li>
+								<button
+									class="btn-categoria"
+									data-categoria="pescados"
+								>
+									Pescados
+								</button>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<button class="boton-menu">Bebidas</button>
+					</li>
+					<li>
+						<button class="boton-menu">Hogar</button>
+					</li>
+					<li>
+						<button class="boton-menu">Higiene y Cuidado</button>
+					</li>
+					<li>
+						<a class="boton-menu carrito" href="carrito.html">
+							Carrito
+						</a>
+						<span class="numerito" id="numerito">0</span>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<div
+				id="contenedor-tarjeta-producto"
+				class="contenedor-tarjeta-producto"
+			>
+				<!-- Aqui van las tarjetas con JS dinamicas -->
+			</div>
+		</main>
+
+		<footer>
+			<p>
+				&COPY 2024 Supermercado Olavarria. Todos los derechos reservados
+			</p>
+			<div class="contenedor-redes">
+				<a href=""><i class="bi bi-whatsapp"></i></a>
+				<a href=""><i class="bi bi-instagram"></i></a>
+				<a href=""><i class="bi bi-facebook"></i></a>
+				<a href=""><i class="bi bi-twitter-x"></i></a>
+			</div>
+		</footer>
+		<script src="./js/script.js"></script>
+	</body>
+</html>
