@@ -42,7 +42,7 @@ body {
 
 .titulo-principal span {
 	color: #ffd700;
-	margin-right: 110px;
+	margin-right: 75px;
 }
 
 .barra-navegacion-menu {
@@ -104,7 +104,7 @@ body {
 	border-radius: 50%;
 	position: absolute;
 	top: 50px;
-	right: 35px;
+	right: 10px;
 	width: 20px;
 	height: 20px;
 	display: flex;
@@ -198,16 +198,15 @@ body {
 	box-sizing: border-box;
 }
 
-.titulo-categoria,
-.titulo-subcategoria {
+.titulo-categoria {
 	width: 100%; /* Mantén el título ocupando todo el ancho */
 	font-family: "Montserrat", sans-serif; /* Con fuente de respaldo */
 	font-size: 24px; /* Tamaño ajustado */
 	font-weight: 700; /* Negrita */
 	color: #333; /* Contraste con el fondo */
-	margin: 40px 0; /* Solo márgenes superior e inferior */
+	margin: 40px; /* Solo márgenes superior e inferior */
 	padding: 0; /* Sin espacio interno */
-	text-align: center; /* Centrado horizontal */
+	text-align: left; /* Centrado horizontal */
 	letter-spacing: 1px; /* Espaciado entre letras */
 	border-bottom: 2px solid #ccc; /* Línea decorativa opcional */
 }
