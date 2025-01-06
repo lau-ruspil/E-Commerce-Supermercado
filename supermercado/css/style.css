@@ -149,6 +149,7 @@ body {
 
 /* Estilo de los botones dentro del submenú */
 .sub-menu li button {
+	letter-spacing: 1px;
 	color: #fff;
 	display: block;
 	font-family: "Montserrat", sans-serif;
@@ -207,7 +208,7 @@ body {
 	margin: 40px; /* Solo márgenes superior e inferior */
 	padding: 0; /* Sin espacio interno */
 	text-align: left; /* Centrado horizontal */
-	letter-spacing: 1px; /* Espaciado entre letras */
+	letter-spacing: 1.5px; /* Espaciado entre letras */
 	border-bottom: 2px solid #ccc; /* Línea decorativa opcional */
 }
 
