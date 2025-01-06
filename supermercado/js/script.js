@@ -863,53 +863,32 @@ const botonesMenuPrincipal = document.querySelectorAll(".boton-menu");
 // Botones subCategorias DOM
 const botonesSubMenu = document.querySelectorAll(".btn-categoria");
 
-function cargarProductos(categoriaSeleccionada, esCategoriaPrincipal = false) {
-	contenedorProductos.innerHTML = ""; // Limipia el contenedor antes de cargar los productos
+// Función para cargar los productos
+function cargarProductos(SubcategoriaSeleccionada) {
+	contenedorProductos.innerHTML = ""; // Limpiar el contenedor antes de cargar nuevos productos
 
-	// Crear y agregar el título de la categoría
-	const tituloCategoria = document.createElement("h2");
-	tituloCategoria.textContent =
-		categoriaSeleccionada.charAt(0).toUpperCase() +
-		categoriaSeleccionada.slice(1);
-	tituloCategoria.classList.add("titulo-categoria"); // Estilos
-	contenedorProductos.appendChild(tituloCategoria);
+	const productosCategoria = productos.alimentos[SubcategoriaSeleccionada];
 
-	if (esCategoriaPrincipal) {
-		// Recorrer todas las subcategorías y agregar sus productos
-		const categorias = productos[categoriaSeleccionada];
-		if (categorias) {
-			for (const subcategoria in categorias) {
-				const productosSubcategoria = categorias[subcategoria];
-				productosACargar = productosACargar.concat(
-					productosSubcategoria
-				);
-			}
-		}
-	} else {
-		// Si es una subcategoría específica
-		productosACargar =
-			productos.alimentos[categoriaSeleccionada] ||
-			productos.bebidas[categoriaSeleccionada] ||
-			[];
-	}
+	if (productosCategoria) {
+		const tituloCategoria = document.createElement("h2");
+		tituloCategoria.textContent =
+			SubcategoriaSeleccionada.charAt(0).toUpperCase() +
+			SubcategoriaSeleccionada.slice(1);
+		tituloCategoria.classList.add("titulo-categoria");
+		contenedorProductos.appendChild(tituloCategoria);
 
-	if (productosACargar.lenght > 0) {
-		productosACargar.forEach((producto) => {
-			// Crear la tarjeta del producto
+		productosCategoria.forEach((producto) => {
 			const divCard = document.createElement("div");
 			divCard.classList.add("tarjeta-producto");
 
-			// Contenedor de imagen
 			const divImagen = document.createElement("div");
 			divImagen.classList.add("contenedor-imagen-producto");
 
-			// Crear imagen del producto
 			const imagenProducto = document.createElement("img");
-			imagenProducto.src = producto.img; // atributo ruta
-			imagenProducto.alt = producto.titulo; // atributo texto alternativo
+			imagenProducto.src = producto.img;
+			imagenProducto.alt = producto.titulo;
 			divImagen.appendChild(imagenProducto);
 
-			// Mostrar oferta si aplica
 			if (producto.oferta) {
 				const spanOferta = document.createElement("span");
 				spanOferta.classList.add("oferta");
@@ -917,16 +896,14 @@ function cargarProductos(categoriaSeleccionada, esCategoriaPrincipal = false) {
 				divImagen.appendChild(spanOferta);
 			}
 
-			// Contenedor de información
 			const divInfo = document.createElement("div");
 			divInfo.classList.add("contenedor-info-producto");
 
 			const tituloProducto = document.createElement("h3");
 			tituloProducto.textContent = producto.titulo;
-			tituloProducto.classList.add("producto-titulo");
+			tituloProducto.classList.add("producto-titulo"); // Añadido para asegurar el estilo correcto
 			divInfo.appendChild(tituloProducto);
 
-			// Contenedor de precios
 			const divPrecio = document.createElement("div");
 			divPrecio.classList.add("contenedor-producto-precio");
 
@@ -944,56 +921,25 @@ function cargarProductos(categoriaSeleccionada, esCategoriaPrincipal = false) {
 
 			divInfo.appendChild(divPrecio);
 
-			// Botón para agregar al carrito
 			const botonAgregarCarrito = document.createElement("button");
 			botonAgregarCarrito.classList.add("producto-agregar");
 			botonAgregarCarrito.textContent = "Agregar al Carrito";
 			divInfo.appendChild(botonAgregarCarrito);
 
-			// Agregar contenedores al contenedor principal
 			divCard.appendChild(divImagen);
 			divCard.appendChild(divInfo);
 
-			// Agregar la tarjeta al contenedor de productos
 			contenedorProductos.appendChild(divCard);
 		});
-	} else {
-		contenedorProductos.innerHTML = `<p class='titulo-categoria'>No hay productos disponibles en esta categoría.</p>`;
 	}
 }
 
-function manejarClickMenuPrincipal(event) {
-	const categoria = event.target.textContent.toLowerCase();
-	if (productos.alimentos[categoria]) {
-		activarBotonMenuPrincipal(categoria);
-		cargarProductos(categoria);
-	}
-}
-
-function activarBotonMenuPrincipal(botonActivo) {
-	//Remover la clase activa a todos los botones
-
-	botonesMenuPrincipal.forEach((boton) => {
-		boton.classList.remove("active");
-	});
-
-	// Agregarsela al boton que fue clickeado
-
-	botonActivo.classList.add("active");
-}
-
+// Por cada boton del subMenu Alimentos escuchamos el evento y accedemos al atributo
+// que nos retorna el valor que tiene el boton (la subCategoria)
 botonesSubMenu.forEach((boton) => {
 	boton.addEventListener("click", () => {
-		const categoria = boton.getAttribute("data-categoria");
-		cargarProductos(categoria);
-
-		activarBotonMenuPrincipal(
-			boton.closest(".submenu").previousElementSibling
-		);
+		const subCategoria = boton.getAttribute("data-categoria");
+		// Pasamos por parametro la subcategoria para recorrer el array y cargar los productos
+		cargarProductos(subCategoria);
 	});
-});
-
-// Agregar el active y cargar los productos de dichos
-botonesMenuPrincipal.forEach((boton) => {
-	boton.addEventListener("click", manejarClickMenuPrincipal);
 });
