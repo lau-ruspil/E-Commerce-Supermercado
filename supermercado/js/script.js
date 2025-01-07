@@ -697,7 +697,7 @@ const productos = {
 			{
 				id: 88,
 				img: "./img/alimentos/CarnesYpescados/pollo/muslos_pollo.jpeg",
-				titulo: "Muslos Pollo X 1 Kg.",
+				titulo: "Muslos de Pollo X 1 Kg.",
 				precioActual: "$4900",
 				precioViejo: "",
 				oferta: false,
@@ -1236,6 +1236,30 @@ const productos = {
 			},
 		],
 	},
+	bebidas: {
+		cervezas: [
+			{
+				id: 155,
+				img: "./img/alimentos/panaderia/tarta_tofi.jpeg",
+				titulo: "Agua VillaVicencio",
+				precioActual: "1500",
+				precioViejo: "",
+				oferta: false,
+			},
+		],
+	},
+	hogar: {
+		muebles: [
+			{
+				id: 156,
+				img: "./img/alimentos/panaderia/tarta_tofi.jpeg",
+				titulo: "Mesa de Luz",
+				precioActual: "15000",
+				precioViejo: "",
+				oferta: false,
+			},
+		],
+	},
 };
 
 // Contendor de tarjetas de productos DOM
@@ -1243,82 +1267,128 @@ const contenedorProductos = document.querySelector(
 	"#contenedor-tarjeta-producto"
 );
 
+const botonInicio = document.querySelector("#boton-inicio");
+
+let numeritoCarrito = document.querySelector("#numerito");
+
 //Botones Menu Principal
 const botonesMenuPrincipal = document.querySelectorAll(".boton-menu");
 
 // Botones subCategorias DOM
 const botonesSubMenu = document.querySelectorAll(".btn-categoria");
 
-// Función para cargar los productos
-function cargarProductos(SubcategoriaSeleccionada) {
+function crearTarjetaProducto(producto) {
+	const divCard = document.createElement("div");
+	divCard.classList.add("tarjeta-producto");
+
+	const divImagen = document.createElement("div");
+	divImagen.classList.add("contenedor-imagen-producto");
+
+	const imagenProducto = document.createElement("img");
+	imagenProducto.src = producto.img;
+	imagenProducto.alt = producto.titulo;
+	divImagen.appendChild(imagenProducto);
+
+	if (producto.oferta) {
+		const spanOferta = document.createElement("span");
+		spanOferta.classList.add("oferta");
+		spanOferta.textContent = "Oferta";
+		divImagen.appendChild(spanOferta);
+	}
+
+	const divInfo = document.createElement("div");
+	divInfo.classList.add("contenedor-info-producto");
+
+	const tituloProducto = document.createElement("h3");
+	tituloProducto.textContent = producto.titulo;
+	tituloProducto.classList.add("producto-titulo");
+	divInfo.appendChild(tituloProducto);
+
+	const divPrecio = document.createElement("div");
+	divPrecio.classList.add("contenedor-producto-precio");
+
+	const precioActual = document.createElement("span");
+	precioActual.classList.add("producto-precio-actual");
+	precioActual.textContent = `Precio: ${producto.precioActual}`;
+	divPrecio.appendChild(precioActual);
+
+	if (producto.precioViejo) {
+		const precioViejo = document.createElement("span");
+		precioViejo.classList.add("producto-precio-viejo");
+		precioViejo.textContent = `Antes: ${producto.precioViejo}`;
+		divPrecio.appendChild(precioViejo);
+	}
+
+	divInfo.appendChild(divPrecio);
+
+	const botonAgregarCarrito = document.createElement("button");
+	botonAgregarCarrito.classList.add("producto-agregar");
+	botonAgregarCarrito.textContent = "Agregar al Carrito";
+	botonAgregarCarrito.id = producto.id;
+
+	divInfo.appendChild(botonAgregarCarrito);
+
+	divCard.appendChild(divImagen);
+	divCard.appendChild(divInfo);
+
+	return divCard;
+}
+
+// Función para cargar todos los productos
+function cargarProductos(categoriaPrincipal, subCategoriaSeleccionada) {
 	contenedorProductos.innerHTML = ""; // Limpiar el contenedor antes de cargar nuevos productos
 
-	const productosCategoria = productos.alimentos[SubcategoriaSeleccionada];
+	const productosCategoria =
+		productos[categoriaPrincipal]?.[subCategoriaSeleccionada];
 
 	if (productosCategoria) {
 		const tituloCategoria = document.createElement("h2");
 		tituloCategoria.textContent =
-			SubcategoriaSeleccionada.charAt(0).toUpperCase() +
-			SubcategoriaSeleccionada.slice(1);
+			subCategoriaSeleccionada.charAt(0).toUpperCase() +
+			subCategoriaSeleccionada.slice(1);
 		tituloCategoria.classList.add("titulo-categoria");
 		contenedorProductos.appendChild(tituloCategoria);
 
 		productosCategoria.forEach((producto) => {
-			const divCard = document.createElement("div");
-			divCard.classList.add("tarjeta-producto");
-
-			const divImagen = document.createElement("div");
-			divImagen.classList.add("contenedor-imagen-producto");
-
-			const imagenProducto = document.createElement("img");
-			imagenProducto.src = producto.img;
-			imagenProducto.alt = producto.titulo;
-			divImagen.appendChild(imagenProducto);
-
-			if (producto.oferta) {
-				const spanOferta = document.createElement("span");
-				spanOferta.classList.add("oferta");
-				spanOferta.textContent = "Oferta";
-				divImagen.appendChild(spanOferta);
-			}
-
-			const divInfo = document.createElement("div");
-			divInfo.classList.add("contenedor-info-producto");
-
-			const tituloProducto = document.createElement("h3");
-			tituloProducto.textContent = producto.titulo;
-			tituloProducto.classList.add("producto-titulo"); // Añadido para asegurar el estilo correcto
-			divInfo.appendChild(tituloProducto);
-
-			const divPrecio = document.createElement("div");
-			divPrecio.classList.add("contenedor-producto-precio");
-
-			const precioActual = document.createElement("span");
-			precioActual.classList.add("producto-precio-actual");
-			precioActual.textContent = `Precio: ${producto.precioActual}`;
-			divPrecio.appendChild(precioActual);
-
-			if (producto.oferta && producto.precioViejo) {
-				const precioViejo = document.createElement("span");
-				precioViejo.classList.add("producto-precio-viejo");
-				precioViejo.textContent = `Antes: ${producto.precioViejo}`;
-				divPrecio.appendChild(precioViejo);
-			}
-
-			divInfo.appendChild(divPrecio);
-
-			const botonAgregarCarrito = document.createElement("button");
-			botonAgregarCarrito.classList.add("producto-agregar");
-			botonAgregarCarrito.textContent = "Agregar al Carrito";
-			divInfo.appendChild(botonAgregarCarrito);
-
-			divCard.appendChild(divImagen);
-			divCard.appendChild(divInfo);
-
-			contenedorProductos.appendChild(divCard);
+			const tarjeta = crearTarjetaProducto(producto);
+			contenedorProductos.appendChild(tarjeta);
 		});
 	} else {
 		contenedorProductos.innerHTML = `<h2 class='titulo-categoria'>No hay productos disponibles para esta categoría</h2>`;
+	}
+}
+
+// Función para cargar productos con oferta
+function cargarOfertas() {
+	contenedorProductos.innerHTML = ""; // Limpiar el contenedor antes de cargar nuevos productos
+
+	let productosConOferta = [];
+
+	// Recorrer todas las categorías y subcategorías para encontrar productos con ofertas
+	for (const categoria in productos) {
+		for (const subCategoria in productos[categoria]) {
+			const productosSubCategoria = productos[categoria][subCategoria];
+
+			productosSubCategoria.forEach((producto) => {
+				if (producto.oferta) {
+					// Si tiene una oferta
+					productosConOferta.push(producto);
+				}
+			});
+		}
+	}
+
+	if (productosConOferta.length > 0) {
+		// Si hay productos con oferta, los mostramos
+		productosConOferta.forEach((producto) => {
+			const tarjeta = crearTarjetaProducto(producto);
+			contenedorProductos.appendChild(tarjeta);
+		});
+
+		// Asegurarse de que los botones "Agregar al carrito" tengan sus listeners de eventos
+		actualizarBotonesAgregar();
+	} else {
+		contenedorProductos.innerHTML = `<h2 class='titulo-categoria'>No hay productos en oferta actualmente.</h2>`;
 	}
 }
 
@@ -1332,22 +1402,100 @@ function activarBotonMenu(boton) {
 	boton.classList.add("active");
 }
 
-// Por cada boton del subMenu Alimentos escuchamos el evento y accedemos al atributo
+// Por cada boton de los subMenus escuchamos el evento y accedemos al atributo
 // que nos retorna el valor que tiene el boton (la subCategoria)
 botonesSubMenu.forEach((boton) => {
 	boton.addEventListener("click", () => {
-		const subCategoria = boton.getAttribute("data-categoria");
+		const subCategoria = boton.getAttribute("data-Subcategoria");
 		const botonCategoriaPrincipal =
 			boton.parentElement.parentElement.previousElementSibling;
-
-		// Pasamos por parametro la subcategoria para recorrer el array y cargar los productos
-		cargarProductos(subCategoria);
+		// Pasamos por parametro la categoria principal y la subcategoria para recorrer el array y cargar los productos
+		cargarProductos(
+			botonCategoriaPrincipal.getAttribute("data-categoria"),
+			subCategoria
+		);
 		activarBotonMenu(botonCategoriaPrincipal);
-		cargarProductosCarrito();
+		actualizarBotonesAgregar();
 	});
 });
 
-function cargarProductosCarrito() {
+function actualizarBotonesAgregar() {
 	const botonesAgregarCarrito =
 		document.querySelectorAll(".producto-agregar");
+
+	botonesAgregarCarrito.forEach((boton) => {
+		boton.addEventListener("click", agregarAlCarrito);
+	});
 }
+
+let productosEnCarrito = [];
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+
+if (productosEnCarritoLS) {
+	productosEnCarrito = JSON.parse(productosEnCarritoLS);
+	console.log("Carrito cargado desde localStorage:", productosEnCarrito);
+} else {
+	productosEnCarrito = [];
+}
+// Llamar a actualizarNumerito después de cargar el carrito para actualizar el contador
+actualizarNumerito();
+
+// Función agregar al carrito
+function agregarAlCarrito(e) {
+	const idBoton = e.currentTarget.id;
+	let productoSeleccionado = null;
+
+	// Buscar en todas las categorías principales
+	for (const categoria in productos) {
+		for (const subCategoria in productos[categoria]) {
+			const productosSubCategoria = productos[categoria][subCategoria];
+
+			const producto = productosSubCategoria.find(
+				(producto) => String(producto.id) === String(idBoton)
+			);
+
+			if (producto) {
+				productoSeleccionado = producto;
+				break;
+			}
+		}
+		if (productoSeleccionado) break;
+	}
+
+	// Si se encontró el producto, agregarlo al carrito
+	if (productoSeleccionado) {
+		const productoEnCarrito = productosEnCarrito.find(
+			(p) => p.id === productoSeleccionado.id
+		);
+
+		if (productoEnCarrito) {
+			productoEnCarrito.cantidad += 1;
+		} else {
+			productosEnCarrito.push({ ...productoSeleccionado, cantidad: 1 });
+		}
+
+		localStorage.setItem(
+			"productos-en-carrito",
+			JSON.stringify(productosEnCarrito)
+		);
+
+		actualizarNumerito();
+	}
+}
+
+function actualizarNumerito() {
+	let nuevoNumerito = productosEnCarrito.reduce(
+		(acc, producto) => acc + producto.cantidad,
+		0
+	);
+
+	// Actualizamos el contador de productos en el carrito
+	numeritoCarrito.innerHTML = nuevoNumerito;
+}
+
+// Escuchador de evento para cuando se haga click en el boton de inicio Cargar productos en ofertas
+botonInicio.addEventListener("click", cargarOfertas);
+
+// Al cargar la página por defecto cargar ofertas y marcar el boton de inicio
+cargarOfertas();
+botonInicio.addEventListener("click", () => activarBotonMenu(botonInicio));

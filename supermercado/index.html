@@ -18,15 +18,19 @@
 				</h1>
 				<ul class="barra-navegacion-menu">
 					<li>
-						<button class="boton-menu active">Inicio</button>
+						<button class="boton-menu active" id="boton-inicio">
+							Inicio
+						</button>
 					</li>
 					<li class="submenu">
-						<button class="boton-menu">Alimentos</button>
+						<button class="boton-menu" data-categoria="alimentos">
+							Alimentos
+						</button>
 						<ul class="sub-menu">
 							<li>
 								<button
 									class="btn-categoria"
-									data-categoria="verduras"
+									data-Subcategoria="verduras"
 								>
 									Verduras
 								</button>
@@ -34,7 +38,7 @@
 							<li>
 								<button
 									class="btn-categoria"
-									data-categoria="frutas"
+									data-Subcategoria="frutas"
 								>
 									Frutas
 								</button>
@@ -42,7 +46,7 @@
 							<li>
 								<button
 									class="btn-categoria"
-									data-categoria="carnes"
+									data-Subcategoria="carnes"
 								>
 									Carnes
 								</button>
@@ -50,7 +54,7 @@
 							<li>
 								<button
 									class="btn-categoria"
-									data-categoria="pescados"
+									data-Subcategoria="pescados"
 								>
 									Pescados
 								</button>
@@ -58,7 +62,7 @@
 							<li>
 								<button
 									class="btn-categoria"
-									data-categoria="panadería"
+									data-Subcategoria="panadería"
 								>
 									Panadería
 								</button>
@@ -66,12 +70,14 @@
 						</ul>
 					</li>
 					<li class="submenu">
-						<button class="boton-menu">Bebidas</button>
+						<button class="boton-menu" data-categoria="bebidas">
+							Bebidas
+						</button>
 						<ul class="sub-menu">
 							<li>
 								<button
 									class="btn-categoria"
-									data-categoria="cervezas"
+									data-Subcategoria="cervezas"
 								>
 									Cervezas
 								</button>
@@ -103,10 +109,37 @@
 						</ul>
 					</li>
 					<li class="submenu">
-						<button class="boton-menu">Hogar</button>
+						<button class="boton-menu" data-categoria="hogar">
+							Hogar
+						</button>
+						<ul class="sub-menu">
+							<li>
+								<button
+									class="btn-categoria"
+									data-categoria="muebles"
+								>
+									Muebles
+								</button>
+							</li>
+						</ul>
 					</li>
 					<li class="submenu">
-						<button class="boton-menu">Higiene y Cuidado</button>
+						<button
+							class="boton-menu"
+							data-categoria="higiene y cuidado"
+						>
+							Higiene y Cuidado
+						</button>
+						<ul class="sub-menu">
+							<li>
+								<button
+									class="btn-categoria"
+									data-categoria="shampoo"
+								>
+									Shampoos
+								</button>
+							</li>
+						</ul>
 					</li>
 					<li>
 						<a class="boton-menu carrito" href="carrito.html">
@@ -123,144 +156,6 @@
 				id="contenedor-tarjeta-producto"
 				class="contenedor-tarjeta-producto"
 			>
-				<div class="tarjeta-producto">
-					<div class="contenedor-imagen-producto">
-						<span class="oferta">Oferta</span>
-						<img
-							src="./img/alimentos/CarnesYpescados/Carnes/bife_de_chorizo.jpeg"
-							alt=""
-						/>
-					</div>
-					<div class="contenedor-info-producto">
-						<h3 class="producto-titulo">Bife de Chorizo X 1 Kg.</h3>
-						<div class="contenedor-producto-precio">
-							<span class="producto-precio-actual"
-								>Precio: $7000</span
-							>
-							<span class="producto-precio-viejo"
-								>Antes: $9000
-							</span>
-						</div>
-						<button class="producto-agregar">
-							Agregar al Carrito
-						</button>
-					</div>
-				</div>
-				<div class="tarjeta-producto">
-					<div class="contenedor-imagen-producto">
-						<span class="oferta">Oferta</span>
-						<img
-							src="./img/alimentos/CarnesYpescados/Carnes/carnaza.jpeg"
-							alt=""
-						/>
-					</div>
-					<div class="contenedor-info-producto">
-						<h3 class="producto-titulo">Carnaza X 1 Kg.</h3>
-						<div class="contenedor-producto-precio">
-							<span class="producto-precio-actual"
-								>Precio: $2000</span
-							>
-							<span class="producto-precio-viejo"
-								>Antes: $9000
-							</span>
-						</div>
-						<button class="producto-agregar">
-							Agregar al Carrito
-						</button>
-					</div>
-				</div>
-				<div class="tarjeta-producto">
-					<div class="contenedor-imagen-producto">
-						<span class="oferta">Oferta</span>
-						<img
-							src="./img/alimentos/CarnesYpescados/Carnes/lomo.jpeg"
-							alt=""
-						/>
-					</div>
-					<div class="contenedor-info-producto">
-						<h3 class="producto-titulo">Lomo X 1 Kg.</h3>
-						<div class="contenedor-producto-precio">
-							<span class="producto-precio-actual"
-								>Precio: $7000</span
-							>
-							<span class="producto-precio-viejo"
-								>Antes: $9000
-							</span>
-						</div>
-						<button class="producto-agregar">
-							Agregar al Carrito
-						</button>
-					</div>
-				</div>
-				<div class="tarjeta-producto">
-					<div class="contenedor-imagen-producto">
-						<span class="oferta">Oferta</span>
-						<img
-							src="./img/alimentos/CarnesYpescados/Carnes/entraña.jpeg"
-							alt=""
-						/>
-					</div>
-					<div class="contenedor-info-producto">
-						<h3 class="producto-titulo">Entraña X 1 Kg.</h3>
-						<div class="contenedor-producto-precio">
-							<span class="producto-precio-actual"
-								>Precio: $15000</span
-							>
-							<span class="producto-precio-viejo"
-								>Antes: $20000
-							</span>
-						</div>
-						<button class="producto-agregar">
-							Agregar al Carrito
-						</button>
-					</div>
-				</div>
-				<div class="tarjeta-producto">
-					<div class="contenedor-imagen-producto">
-						<span class="oferta">Oferta</span>
-						<img src="./img/alimentos/panaderia/" alt="" />
-					</div>
-					<div class="contenedor-info-producto">
-						<h3 class="producto-titulo">Carne picada X 1 Kg.</h3>
-						<div class="contenedor-producto-precio">
-							<span class="producto-precio-actual"
-								>Precio: $4000</span
-							>
-							<span class="producto-precio-viejo"
-								>Antes: $6000
-							</span>
-						</div>
-						<button class="producto-agregar">
-							Agregar al Carrito
-						</button>
-					</div>
-				</div>
-				<div class="tarjeta-producto">
-					<div class="contenedor-imagen-producto">
-						<span class="oferta">Oferta</span>
-						<img
-							src="./img/alimentos/CarnesYpescados/Carnes/colita_de_cuadril.jpeg"
-							alt=""
-						/>
-					</div>
-					<div class="contenedor-info-producto">
-						<h3 class="producto-titulo">
-							Colita de Cuadril X 1 Kg.
-						</h3>
-						<div class="contenedor-producto-precio">
-							<span class="producto-precio-actual"
-								>Precio: $7000</span
-							>
-							<span class="producto-precio-viejo"
-								>Antes: $10000
-							</span>
-						</div>
-						<button class="producto-agregar">
-							Agregar al Carrito
-						</button>
-					</div>
-				</div>
-
 				<!-- Aqui van las tarjetas con JS dinamicas -->
 			</div>
 		</main>
