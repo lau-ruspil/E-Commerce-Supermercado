@@ -1,19 +1,25 @@
+import { formatearPrecio } from "./util.js"; // Importamos la funcion para formatear precio
+
 const productosEnCarrito = localStorage.getItem("productos-en-carrito");
 let arrayProductosEnCarrito = JSON.parse(productosEnCarrito) || [];
+
+//Contenedor carrito
+const contenedorCarrito = document.querySelector("#contenedor-carrito");
+
+//Parrafo texto carrito vacio
+const carritoVacio = document.querySelector("#carrito-vacio");
 
 // Contendor de tarjetas de productos del carrito
 const contenedorCarritoProductos = document.querySelector(
 	"#contenedor-carrito-productos"
 );
 
-//Parrafo texto carrito vacio
-const carritoVacio = document.querySelector("#carrito-vacio");
-
 function cargarProductosEnCarrito() {
 	contenedorCarritoProductos.innerHTML = ""; // Limpiamos el contenedor antes de cargar productos
 
 	if (arrayProductosEnCarrito.length === 0) {
 		carritoVacio.style.display = "block";
+		contenedorCarrito.style.display = "none";
 		return;
 	} else {
 		carritoVacio.style.display = "none";
@@ -25,7 +31,9 @@ function cargarProductosEnCarrito() {
 		let elementoPrecioViejo = "";
 		// Generar el precio Viejo si existe
 		if (producto.precioViejo && producto.oferta) {
-			elementoPrecioViejo = `<p class="producto-precio-viejo-carrito">Antes: $${producto.precioViejo}</p>`;
+			elementoPrecioViejo = `<p class="producto-precio-viejo-carrito">Antes: <span class="span-precio-viejo">$${formatearPrecio(
+				producto.precioViejo
+			)}</span></p>`;
 		}
 
 		divTarjeta.innerHTML = `
@@ -36,12 +44,16 @@ function cargarProductosEnCarrito() {
 				${producto.titulo}
 			</h3>
 			<p class="producto-precio-actual-carrito">
-				Precio: $${producto.precioActual}
-			</p>
+				Precio: <span class="span-precio-actual">$${formatearPrecio(
+					producto.precioActual
+				)}
+			</span></p>
 			${elementoPrecioViejo} 
-			<p id="subtotal-${producto.id}" class="producto-subtotal-carrito">Subtotal: $${
+			<p id="subtotal-${
+				producto.id
+			}" class="producto-subtotal-carrito">Subtotal: <span class="span-subtotal">$${formatearPrecio(
 			producto.precioActual * producto.cantidad
-		}</p>
+		)}</span></p>
 			<input
 				class="input-cantidad"
 				id="input-cantidad-${producto.id}"
@@ -103,9 +115,19 @@ function actualizarCantidadProducto(idProducto, nuevaCantidad) {
 		const elementoSubTotal = document.querySelector(
 			`#subtotal-${idProducto}`
 		);
-		elementoSubTotal.textContent = `Subtotal: $${
-			producto.precioActual * producto.cantidad // Asegurarnos que el subtotal se actualice
-		}`;
+
+		if (elementoSubTotal) {
+			// Seleccionamos el span dentro del p para actualizar solo su contenido
+			const spanSubtotal =
+				elementoSubTotal.querySelector(".span-subtotal");
+
+			// Actualizamos el valor del subtotal dentro del span
+			if (spanSubtotal) {
+				spanSubtotal.textContent = `$${formatearPrecio(
+					producto.precioActual * producto.cantidad
+				)}`;
+			}
+		}
 
 		// Guardamos el carrito actualizado en localStorage
 		localStorage.setItem(

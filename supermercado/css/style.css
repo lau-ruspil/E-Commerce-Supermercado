@@ -9,6 +9,15 @@
 	src: url(../fuentes/montserrat/Montserrat-Medium.ttf);
 }
 
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column; /* Coloca los elementos en columna */
+}
+
 /* Estilos generales */
 body {
 	margin: 0;
@@ -191,6 +200,7 @@ body {
 	background-color: #e0e0e0;
 	margin: auto;
 	margin-top: 130px;
+	margin-bottom: 30px;
 	padding: 20px 0px;
 	border: 1px solid transparent;
 	display: flex;
@@ -276,14 +286,6 @@ body {
 	margin-bottom: 8px;
 }
 
-/* .producto-detalles {
-	font-size: 16px;
-	font-family: montserrat;
-	color: #777;
-	margin: 0;
-	margin-bottom: 15px;
-} */
-
 .contenedor-producto-precio {
 	display: flex;
 	flex-wrap: wrap;
@@ -295,15 +297,19 @@ body {
 
 .producto-precio-actual {
 	font-family: "Roboto";
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: bold;
 	color: #e74c3c;
 }
 
-.producto-precio-viejo {
+.producto-precio-viejo,
+.precio-viejo-subrayado {
 	font-family: "Montserrat";
 	font-size: 16px;
 	color: #999;
+}
+
+.precio-viejo-subrayado {
 	text-decoration: line-through;
 }
 
@@ -360,7 +366,7 @@ body {
 	align-items: center;
 	border-bottom: 1px solid #e1e1e1;
 	padding: 15px 0;
-	gap: 30px;
+	gap: 40px;
 }
 
 .tarjeta-producto-carrito img {
@@ -390,9 +396,18 @@ body {
 	color: #000b;
 }
 
+.span-precio-actual {
+	display: block;
+	color: #000;
+}
+
 .producto-precio-viejo-carrito {
 	font-size: 16px;
 	color: #fd1d1d;
+}
+
+.span-precio-viejo {
+	display: block;
 	text-decoration: line-through;
 }
 
@@ -400,6 +415,11 @@ body {
 	font-size: 16px;
 	color: #007bff;
 	font-weight: 600;
+	display: block;
+}
+
+.span-subtotal {
+	display: block;
 }
 
 .input-cantidad {
@@ -412,7 +432,7 @@ body {
 	border-radius: 5px;
 	background-color: #f9f9f9;
 	text-align: center;
-	margin-right: 15px;
+	margin-right: 10px;
 }
 
 .input-cantidad::-webkit-inner-spin-button,
@@ -465,7 +485,7 @@ body {
 /* Estilos Footer */
 footer {
 	margin: 0;
-	margin-top: 20px;
+	margin-top: auto;
 	width: 100%;
 	padding: 20px 0;
 	background: linear-gradient(to top, #34495e, #2c3e50);
