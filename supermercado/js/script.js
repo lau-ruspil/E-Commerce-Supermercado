@@ -154,7 +154,7 @@ const productos = {
 				id: 19,
 				img: "./img/alimentos/CarnesYpescados/Carnes/bife_de_chorizo.jpeg",
 				titulo: "Bife de Chorizo Novillito X 1 Kg.",
-				precioActual: "11.500",
+				precioActual: "11500",
 				precioViejo: "",
 				oferta: false,
 			},
@@ -402,7 +402,7 @@ const productos = {
 		lácteos_y_Frescos: [
 			{
 				id: 49,
-				img: "./img/alimentos/lacteos/tallarines_lucchetti.jpeg",
+				img: "./img/alimentos/lacteos/leche_la_serenisima_sachet.jpeg",
 				titulo: "Leche La Serenísima Liviana 1L",
 				precioActual: "1386",
 				precioViejo: "2079",
@@ -410,7 +410,7 @@ const productos = {
 			},
 			{
 				id: 50,
-				img: "./img/alimentos/lacteos/tirabuzon_lucchetti.jpeg",
+				img: "./img/alimentos/lacteos/dulce_de_leche_la_serenisima.jpeg",
 				titulo: "Dulce de Leche Clásico La Serenísima 400 Grs.",
 				precioActual: "2118",
 				precioViejo: "2824",
@@ -418,7 +418,7 @@ const productos = {
 			},
 			{
 				id: 51,
-				img: "./img/alimentos/lacteos/aceite_cocinero.jpeg",
+				img: "./img/alimentos/lacteos/manteca_la_serenisima.jpeg",
 				titulo: "Manteca La Serenísima 200 Grs.",
 				precioActual: "3405",
 				precioViejo: "",
@@ -426,7 +426,7 @@ const productos = {
 			},
 			{
 				id: 52,
-				img: "./img/alimentos/lacteos/arroz_gallo.jpeg",
+				img: "./img/alimentos/lacteos/queso_crema_la_paulina_tradicional.jpeg",
 				titulo: "Queso Crema La Paulina Tradicional 290 Grs.",
 				precioActual: "2475",
 				precioViejo: "",
@@ -434,15 +434,15 @@ const productos = {
 			},
 			{
 				id: 53,
-				img: "./img/alimentos/lacteos/Sal_celusal.jpeg",
+				img: "./img/alimentos/lacteos/queso_finlandia.jpeg",
 				titulo: "Queso Untable Finlandia Light 290 Grs.",
-				precioActual: "3011,25",
+				precioActual: "3011",
 				precioViejo: "4015",
-				oferta: false,
+				oferta: true,
 			},
 			{
 				id: 54,
-				img: "./img/alimentos/lacteos/mayonesa.jpeg",
+				img: "./img/alimentos/lacteos/yogur_frutilla_bebible.jpeg",
 				titulo: "Yogur Bebible Frutilla La Serenísima Clásico 900 Grs.",
 				precioActual: "2200",
 				precioViejo: "",
@@ -450,7 +450,7 @@ const productos = {
 			},
 			{
 				id: 55,
-				img: "./img/alimentos/lacteos/pizza_harina.jpeg",
+				img: "./img/alimentos/lacteos/huevos_blancos.jpeg",
 				titulo: "Huevos Blancos El Mercado X 6 Ud.",
 				precioActual: "1390",
 				precioViejo: "",
@@ -458,7 +458,74 @@ const productos = {
 			},
 			{
 				id: 56,
-				img: "./img/alimentos/lacteos/pure_de_tomate.jpeg",
+				img: "./img/alimentos/lacteos/queso_blanco_la_serenisima.jpeg",
+				titulo: "Queso Blanco Original La Serenísima Clásico 290 Grs.",
+				precioActual: "2925",
+				precioViejo: "",
+				oferta: false,
+			},
+		],
+
+		congelados: [
+			{
+				id: 57,
+				img: "./img/alimentos/lacteos/leche_la_serenisima_sachet.jpeg",
+				titulo: "Leche La Serenísima Liviana 1L",
+				precioActual: "1386",
+				precioViejo: "2079",
+				oferta: true,
+			},
+			{
+				id: 58,
+				img: "./img/alimentos/lacteos/dulce_de_leche_la_serenisima.jpeg",
+				titulo: "Dulce de Leche Clásico La Serenísima 400 Grs.",
+				precioActual: "2118",
+				precioViejo: "2824",
+				oferta: true,
+			},
+			{
+				id: 59,
+				img: "./img/alimentos/lacteos/manteca_la_serenisima.jpeg",
+				titulo: "Manteca La Serenísima 200 Grs.",
+				precioActual: "3405",
+				precioViejo: "",
+				oferta: false,
+			},
+			{
+				id: 60,
+				img: "./img/alimentos/lacteos/queso_crema_la_paulina_tradicional.jpeg",
+				titulo: "Queso Crema La Paulina Tradicional 290 Grs.",
+				precioActual: "2475",
+				precioViejo: "",
+				oferta: false,
+			},
+			{
+				id: 61,
+				img: "./img/alimentos/lacteos/queso_finlandia.jpeg",
+				titulo: "Queso Untable Finlandia Light 290 Grs.",
+				precioActual: "3011.25",
+				precioViejo: "4015",
+				oferta: false,
+			},
+			{
+				id: 62,
+				img: "./img/alimentos/lacteos/yogur_frutilla_bebible.jpeg",
+				titulo: "Yogur Bebible Frutilla La Serenísima Clásico 900 Grs.",
+				precioActual: "2200",
+				precioViejo: "",
+				oferta: false,
+			},
+			{
+				id: 63,
+				img: "./img/alimentos/lacteos/huevos_blancos.jpeg",
+				titulo: "Huevos Blancos El Mercado X 6 Ud.",
+				precioActual: "1390",
+				precioViejo: "",
+				oferta: false,
+			},
+			{
+				id: 64,
+				img: "./img/alimentos/lacteos/queso_blanco_la_serenisima.jpeg",
 				titulo: "Queso Blanco Original La Serenísima Clásico 290 Grs.",
 				precioActual: "2925",
 				precioViejo: "",
@@ -469,7 +536,7 @@ const productos = {
 	bebidas: {
 		cervezas: [
 			{
-				id: 41,
+				id: 65,
 				img: "./img/bebidas/Cervezas/cerveza_stella.jpeg",
 				titulo: "Cerveza Stella Artois Botella Retornable 975cc.",
 				precioActual: "3975",
@@ -477,7 +544,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 42,
+				id: 66,
 				img: "./img/bebidas/Cervezas/amber_lager_patagonia.jpeg",
 				titulo: "Cerveza Roja Patagonia Amber Lager 730cc.",
 				precioActual: "3948.75",
@@ -485,7 +552,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 43,
+				id: 67,
 				img: "./img/bebidas/Cervezas/cerveza_brahma.jpeg",
 				titulo: "Cerveza Rubia Brahma 1L.",
 				precioActual: "1920",
@@ -493,7 +560,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 44,
+				id: 68,
 				img: "./img/bebidas/Cervezas/cerveza_corona.jpeg",
 				titulo: "Cerveza Rubia Corona 1L.",
 				precioActual: "4500",
@@ -501,7 +568,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 45,
+				id: 69,
 				img: "./img/bebidas/Cervezas/cerveza_stella_noire.jpeg",
 				titulo: "Cerveza Negra Stella Artois Noire 1L.",
 				precioActual: "5000",
@@ -509,7 +576,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 46,
+				id: 70,
 				img: "./img/bebidas/Cervezas/cerveza_andes_negra.jpeg",
 				titulo: "Cerveza Andes Negra 1L.",
 				precioActual: "4200",
@@ -517,7 +584,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 47,
+				id: 71,
 				img: "./img/bebidas/Cervezas/cerveza_budweiser.jpeg",
 				titulo: "Cerveza Rubia Budweiser 1L.",
 				precioActual: "2540",
@@ -525,7 +592,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 48,
+				id: 72,
 				img: "./img/bebidas/Cervezas/cerveza_imperial.jpeg",
 				titulo: "Cerveza Rubia Imperial Botella Retornable 1L.",
 				precioActual: "4000",
@@ -536,7 +603,7 @@ const productos = {
 
 		vinos: [
 			{
-				id: 49,
+				id: 73,
 				img: "./img/bebidas/vinos/vino_tinto_alma_mora.jpeg",
 				titulo: "Vino Tinto Malbec Alma Mora 750ml.",
 				precioActual: "6585",
@@ -544,7 +611,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 50,
+				id: 74,
 				img: "./img/bebidas/vinos/vino_tinto_elementos.jpeg",
 				titulo: "Vino Tinto Malbec Elementos 750ml.",
 				precioActual: "5750",
@@ -552,7 +619,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 51,
+				id: 75,
 				img: "./img/bebidas/vinos/vino_tinto_los_arboles.jpeg",
 				titulo: "Vino Tinto Malbec Los Arboles 750ml.",
 				precioActual: "5469",
@@ -560,7 +627,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 52,
+				id: 76,
 				img: "./img/bebidas/vinos/vino_tinto_emilia.jpeg",
 				titulo: "Vino Tinto Malbec Emilia 750ml.",
 				precioActual: "7150",
@@ -568,7 +635,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 53,
+				id: 77,
 				img: "./img/bebidas/vinos/vino_blanco_cosecha_tardia.jpeg",
 				titulo: "Vino Blanco Cosecha Tardía 750ml.",
 				precioActual: "4989",
@@ -576,7 +643,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 54,
+				id: 78,
 				img: "./img/bebidas/vinos/vino_blanco_cosecha_alaris.jpeg",
 				titulo: "Vino Blanco Cosecha Alaris 750ml.",
 				precioActual: "4729",
@@ -584,7 +651,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 55,
+				id: 79,
 				img: "./img/bebidas/vinos/vino_blanco_torrontes_elementos.jpeg",
 				titulo: "Vino Blanco Torrontés Elementos 750ml.",
 				precioActual: "5750",
@@ -592,7 +659,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 56,
+				id: 80,
 				img: "./img/bebidas/vinos/vino_blanco_dilema.jpeg",
 				titulo: "Vino Blanco Dulce Natural Dilema 750ml.",
 				precioActual: "4540",
@@ -603,7 +670,7 @@ const productos = {
 
 		aperitivos: [
 			{
-				id: 57,
+				id: 81,
 				img: "./img/bebidas/aperitivos/fernet_branca.jpeg",
 				titulo: "Fernet Branca 750cc.",
 				precioActual: "12400",
@@ -611,7 +678,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 58,
+				id: 82,
 				img: "./img/bebidas/aperitivos/gancia.jpeg",
 				titulo: "Gancia Americano 950cc.",
 				precioActual: "5579",
@@ -619,7 +686,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 59,
+				id: 83,
 				img: "./img/bebidas/aperitivos/cinzano_vermouth.jpeg",
 				titulo: "Cinzano Vermouth Rosso 1L.",
 				precioActual: "6590",
@@ -627,7 +694,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 60,
+				id: 84,
 				img: "./img/bebidas/aperitivos/aperol.jpeg",
 				titulo: "Aperol 750cc.",
 				precioActual: "9690",
@@ -635,7 +702,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 61,
+				id: 85,
 				img: "./img/bebidas/aperitivos/campari.jpeg",
 				titulo: "Campari Bitter 750cc.",
 				precioActual: "10290",
@@ -643,7 +710,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 62,
+				id: 86,
 				img: "./img/bebidas/aperitivos/fernet_buhero.jpeg",
 				titulo: "Fernet Buhero Negro 700cc.",
 				precioActual: "6405",
@@ -651,7 +718,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 63,
+				id: 87,
 				img: "./img/bebidas/aperitivos/dr_lemon.jpeg",
 				titulo: "Dr. Lemon Vodka 1L.",
 				precioActual: "2430",
@@ -659,7 +726,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 64,
+				id: 88,
 				img: "./img/bebidas/aperitivos/fernet_branca_menta.jpeg",
 				titulo: "Fernet Branca Menta 750cc.",
 				precioActual: "12400",
@@ -670,7 +737,7 @@ const productos = {
 
 		bebidas_Blancas: [
 			{
-				id: 65,
+				id: 89,
 				img: "./img/bebidas/bebidasBlancas/smirnoff_comun.jpeg",
 				titulo: "Vodka Smirnoff 700cc.",
 				precioActual: "7999",
@@ -678,7 +745,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 66,
+				id: 90,
 				img: "./img/bebidas/bebidasBlancas/gin_gordon.jpeg",
 				titulo: "Gin Gordon´s 700cc .",
 				precioActual: "14625",
@@ -686,7 +753,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 67,
+				id: 91,
 				img: "./img/bebidas/bebidasBlancas/smirnoff_frutas_tropicales.jpeg",
 				titulo: "Vodka Smirnoff Tropical Fruits 700cc.",
 				precioActual: "9349",
@@ -694,7 +761,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 68,
+				id: 92,
 				img: "./img/bebidas/bebidasBlancas/red_label.jpeg",
 				titulo: "Whisky Johnnie Walker Red Label 750ml.",
 				precioActual: "40955",
@@ -702,7 +769,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 69,
+				id: 93,
 				img: "./img/bebidas/bebidasBlancas/amarula.jpeg",
 				titulo: "Licor Amarula 750cc.",
 				precioActual: "30559",
@@ -710,7 +777,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 70,
+				id: 94,
 				img: "./img/bebidas/bebidasBlancas/black_label.jpeg",
 				titulo: "Whisky Johnnie Walker Black Label 750ml.",
 				precioActual: "65569",
@@ -718,7 +785,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 71,
+				id: 95,
 				img: "./img/bebidas/bebidasBlancas/sernova.jpeg",
 				titulo: "Vodka Sernova 700cc.",
 				precioActual: "7600",
@@ -726,7 +793,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 72,
+				id: 96,
 				img: "./img/bebidas/bebidasBlancas/beefeater_pink.jpeg",
 				titulo: "Gin Beefeater London Pink 700cc",
 				precioActual: "31735",
@@ -737,7 +804,7 @@ const productos = {
 
 		gaseosas: [
 			{
-				id: 73,
+				id: 97,
 				img: "./img/bebidas/gaseosas/coca_zero.jpeg",
 				titulo: "Gaseosa Coca Cola Zero 2.25Lts.",
 				precioActual: "2850",
@@ -745,7 +812,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 74,
+				id: 98,
 				img: "./img/bebidas/gaseosas/coca_original.jpeg",
 				titulo: "Gaseosa Coca Cola Sabor Original 2.25Lts.",
 				precioActual: "2850",
@@ -753,7 +820,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 75,
+				id: 99,
 				img: "./img/bebidas/gaseosas/sprite.jpeg",
 				titulo: "Gaseosa Lima Limón Sprite 2.25Lts.",
 				precioActual: "2850",
@@ -761,7 +828,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 76,
+				id: 100,
 				img: "./img/bebidas/gaseosas/sevenUp.jpeg",
 				titulo: "Gaseosa Lima Limón 7 Up 2.25Lts.",
 				precioActual: "2262",
@@ -769,7 +836,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 77,
+				id: 101,
 				img: "./img/bebidas/gaseosas/pepsi.jpeg",
 				titulo: "Gaseosa Cola Pepsi 2.25Lts.",
 				precioActual: "1640",
@@ -777,15 +844,15 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 78,
+				id: 102,
 				img: "./img/bebidas/gaseosas/pepsi_black.jpeg",
 				titulo: "Gaseosa Cola Pepsi Black 2.25Lts.",
-				precioActual: "1273,35",
+				precioActual: "1273.35",
 				precioViejo: "1959",
 				oferta: true,
 			},
 			{
-				id: 79,
+				id: 103,
 				img: "./img/bebidas/gaseosas/scheweppes.jpeg",
 				titulo: "Gaseosa Pomelo Schweppes Zero 2.25Lts.",
 				precioActual: "2850",
@@ -793,7 +860,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 80,
+				id: 104,
 				img: "./img/bebidas/gaseosas/fanta.jpeg",
 				titulo: "Gaseosa Naranja Fanta 2.25Lts",
 				precioActual: "2850",
@@ -804,7 +871,7 @@ const productos = {
 
 		aguas: [
 			{
-				id: 81,
+				id: 105,
 				img: "./img/bebidas/aguas/agua_bidon_villa_del_sur.jpeg",
 				titulo: "Agua de Mesa Sin Gas Villa del Sur Bidón 6.2Lts.",
 				precioActual: "3525",
@@ -812,7 +879,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 82,
+				id: 106,
 				img: "./img/bebidas/aguas/aquarius_pera.jpeg",
 				titulo: "Agua Saborizada de Pera Aquarius 2.25Lts.",
 				precioActual: "1612",
@@ -820,7 +887,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 83,
+				id: 107,
 				img: "./img/bebidas/aguas/agua_villa_vicencio.jpeg",
 				titulo: "Agua Mineral Sin Gas Villavicencio 2.25Lts.",
 				precioActual: "1326",
@@ -828,7 +895,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 84,
+				id: 108,
 				img: "./img/bebidas/aguas/agua_villa_del_sur.jpeg",
 				titulo: "Agua Mineral Sin Gas Villa del Sur 2.25Lts.",
 				precioActual: "1650",
@@ -836,7 +903,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 85,
+				id: 109,
 				img: "./img/bebidas/aguas/aquarius_manzana.jpeg",
 				titulo: "Agua Saborizada de Manzana Aquarius 2.25Lts.",
 				precioActual: "1612.50",
@@ -844,7 +911,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 86,
+				id: 110,
 				img: "./img/bebidas/aguas/levite_pomelo.jpeg",
 				titulo: "Agua Saborizada de Pomelo Levité 2.25Lts.",
 				precioActual: "2260",
@@ -852,7 +919,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 87,
+				id: 111,
 				img: "./img/bebidas/aguas/agua_glaciar.jpeg",
 				titulo: "Agua Mineral Sin Gas Glaciar 2.25Lts.",
 				precioActual: "1394.25",
@@ -860,7 +927,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 88,
+				id: 112,
 				img: "./img/bebidas/aguas/levite_manzana.jpeg",
 				titulo: "Agua Saborizada de Manzana Levité 2.25Lts",
 				precioActual: "2259",
@@ -871,7 +938,7 @@ const productos = {
 
 		jugos: [
 			{
-				id: 89,
+				id: 113,
 				img: "./img/bebidas/jugos/clight_naranja_dulce.jpeg",
 				titulo: "Jugo en Polvo Clight Naranja Dulce 7.5 Grs.",
 				precioActual: "250.67",
@@ -879,7 +946,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 90,
+				id: 114,
 				img: "./img/bebidas/jugos/clight_pomelo_rosado.jpeg",
 				titulo: "Jugo en Polvo Clight Pomelo Rosado 8 Grs.",
 				precioActual: "250.67",
@@ -887,7 +954,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 91,
+				id: 115,
 				img: "./img/bebidas/jugos/clight_limonada.jpeg",
 				titulo: "Jugo en Polvo Clight Limonada 8 Grs.",
 				precioActual: "250.67",
@@ -895,7 +962,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 92,
+				id: 116,
 				img: "./img/bebidas/jugos/clight_anana.jpeg",
 				titulo: "Jugo en Polvo Clight Ananá 8 Grs.",
 				precioActual: "250.67",
@@ -903,7 +970,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 93,
+				id: 117,
 				img: "./img/bebidas/jugos/clight_naranja_durazno.jpeg",
 				titulo: "Jugo en Polvo Clight Naranja Durazno 7.5 Grs.",
 				precioActual: "250.67",
@@ -911,7 +978,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 94,
+				id: 118,
 				img: "./img/bebidas/jugos/tang_naranja_dulce.jpeg",
 				titulo: "Jugo en Polvo Tang Naranja Dulce 15 Grs.",
 				precioActual: "256",
@@ -919,7 +986,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 95,
+				id: 119,
 				img: "./img/bebidas/jugos/tang_naranja_mango.jpeg",
 				titulo: "Jugo en Polvo Tang Naranja Mango 15 Grs.",
 				precioActual: "256",
@@ -927,7 +994,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 96,
+				id: 120,
 				img: "./img/bebidas/jugos/tang_limonada_dulce.jpeg",
 				titulo: "Jugo en Polvo Tang Limonada Dulce 15 Grs.",
 				precioActual: "256",
@@ -938,7 +1005,7 @@ const productos = {
 
 		bebidas_Isotónicas: [
 			{
-				id: 97,
+				id: 121,
 				img: "./img/bebidas/bebidasIsotonicas/gatorade_manzana.jpeg",
 				titulo: "Bebida Isotónica Gatorade Manzana 1.25Lts.",
 				precioActual: "1639.20",
@@ -946,7 +1013,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 98,
+				id: 122,
 				img: "./img/bebidas/bebidasIsotonicas/gatorade_frutas_tropicales.jpeg",
 				titulo: "Bebida Isotónica Gatorade Frutas Tropicales 1.25Lts.",
 				precioActual: "1639.20",
@@ -954,7 +1021,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 99,
+				id: 123,
 				img: "./img/bebidas/bebidasIsotonicas/gatorade_cool_blue.jpeg",
 				titulo: "Bebida Isotónica Gatorade Cool Blue 1.25Lts.",
 				precioActual: "1639.20",
@@ -962,7 +1029,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 100,
+				id: 124,
 				img: "./img/bebidas/bebidasIsotonicas/gatorade_naranja.jpeg",
 				titulo: "Bebida Isotónica Gatorade Naranja 1.25Lts.",
 				precioActual: "1639.20",
@@ -970,7 +1037,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 101,
+				id: 125,
 				img: "./img/bebidas/bebidasIsotonicas/gatorade_uva.jpeg",
 				titulo: "Bebida Isotónica Gatorade Uva 1.25Lts.",
 				precioActual: "1639.20",
@@ -978,7 +1045,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 102,
+				id: 126,
 				img: "./img/bebidas/bebidasIsotonicas/powerade_manzana.jpeg",
 				titulo: "Bebida Isotónica Powerade Manzana 995cc.",
 				precioActual: "1237.50",
@@ -986,7 +1053,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 103,
+				id: 127,
 				img: "./img/bebidas/bebidasIsotonicas/powerade_frutas_tropicales.jpeg",
 				titulo: "Bebida Isotónica Powerade Frutas Tropicales 995cc.",
 				precioActual: "1237.50",
@@ -994,7 +1061,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 104,
+				id: 128,
 				img: "./img/bebidas/bebidasIsotonicas/powerade_mountain_blast.jpeg",
 				titulo: "Bebida Isotónica Powerade Mountain Blast 995cc.",
 				precioActual: "1237.50",
@@ -1005,7 +1072,7 @@ const productos = {
 
 		bebidas_Energizantes: [
 			{
-				id: 105,
+				id: 129,
 				img: "./img/bebidas/bebidasEnergizantes/speed_473.jpeg",
 				titulo: "Bebida Energizante Speed Lata 473cc.",
 				precioActual: "2125",
@@ -1013,7 +1080,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 106,
+				id: 130,
 				img: "./img/bebidas/bebidasEnergizantes/rockstar.jpeg",
 				titulo: "Bebida Energizante Rockstar 500cc.",
 				precioActual: "982.50",
@@ -1021,7 +1088,7 @@ const productos = {
 				oferta: true,
 			},
 			{
-				id: 107,
+				id: 131,
 				img: "./img/bebidas/bebidasEnergizantes/speed_269.jpeg",
 				titulo: "Bebida Energizante Speed Lata 269cc.",
 				precioActual: "1390",
@@ -1029,7 +1096,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 108,
+				id: 132,
 				img: "./img/bebidas/bebidasEnergizantes/monster_original.jpeg",
 				titulo: "Bebida Energizante Monster Lata 473cc.",
 				precioActual: "2300",
@@ -1037,7 +1104,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 109,
+				id: 133,
 				img: "./img/bebidas/bebidasEnergizantes/monster_mango_loco.jpeg",
 				titulo: "Bebida Energizante Monster Lata Sabor Mango Loco 473cc.",
 				precioActual: "2299",
@@ -1045,7 +1112,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 110,
+				id: 134,
 				img: "./img/bebidas/bebidasEnergizantes/red_bull.jpeg",
 				titulo: "Bebida Energizante Red Bull Lata 355cc.",
 				precioActual: "3490",
@@ -1053,7 +1120,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 111,
+				id: 135,
 				img: "./img/bebidas/bebidasEnergizantes/monster_ultra_paradise.jpeg",
 				titulo: "Bebida Energizante Monster Ultra Paradise Lata 473cc.",
 				precioActual: "2300",
@@ -1061,7 +1128,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 112,
+				id: 136,
 				img: "./img/bebidas/bebidasEnergizantes/monster_vr.jpeg",
 				titulo: "Bebida Energizante Monster Vr Lata 473cc.",
 				precioActual: "2300",
@@ -1072,7 +1139,7 @@ const productos = {
 
 		espumantes_y_Sidras: [
 			{
-				id: 113,
+				id: 137,
 				img: "./img/bebidas/espumantesSidras/sidra_1888.jpeg",
 				titulo: "Sidra 1888 750cc.",
 				precioActual: "7935",
@@ -1080,7 +1147,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 114,
+				id: 138,
 				img: "./img/bebidas/espumantesSidras/clerico_fizz.jpeg",
 				titulo: "Clericó Fizz Del Valle 720cc.",
 				precioActual: "4400",
@@ -1088,7 +1155,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 115,
+				id: 139,
 				img: "./img/bebidas/espumantesSidras/espumante_federico_de_alvear_extra_dulce.jpeg",
 				titulo: "Espumante Federico de Alvear Extra Dulce 750cc.",
 				precioActual: "5800",
@@ -1096,7 +1163,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 116,
+				id: 140,
 				img: "./img/bebidas/espumantesSidras/espumante_fresita.jpeg",
 				titulo: "Espumante Fresita 750cc.",
 				precioActual: "9500",
@@ -1104,7 +1171,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 117,
+				id: 141,
 				img: "./img/bebidas/espumantesSidras/espumante_salentein_rose.jpeg",
 				titulo: "Espumante Salentein Brut Nature Rose 750cc.",
 				precioActual: "12900",
@@ -1112,7 +1179,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 118,
+				id: 142,
 				img: "./img/bebidas/espumantesSidras/espumante_salentein.jpeg",
 				titulo: "Espumante Salentein Brut Nature 750cc.",
 				precioActual: "12900",
@@ -1120,7 +1187,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 119,
+				id: 143,
 				img: "./img/bebidas/espumantesSidras/espumante_federico_de_alvear_extra_brut.jpeg",
 				titulo: "Espumante Federico de Alvear Extra Brut 750cc.",
 				precioActual: "5800",
@@ -1128,7 +1195,7 @@ const productos = {
 				oferta: false,
 			},
 			{
-				id: 120,
+				id: 144,
 				img: "./img/bebidas/espumantesSidras/frizze.jpeg",
 				titulo: "Frizze Blue Evolution 1L.",
 				precioActual: "3099",

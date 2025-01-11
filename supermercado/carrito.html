@@ -33,7 +33,7 @@
 
 		<main>
 			<h1 class="titulo-carrito">Carrito</h1>
-			<p class="carrito-vacio" id="carrito-vacio">
+			<p id="carrito-vacio" class="carrito-vacio">
 				Tu carrito está vacío
 			</p>
 			<div id="contenedor-carrito" class="contendor-carrito">
@@ -42,6 +42,21 @@
 					class="contenedor-carrito-productos"
 				>
 					<!-- Esto se va a cargar con JS -->
+				</div>
+				<div
+					id="contenedor-carrito-acciones"
+					class="contenedor-carrito-acciones"
+				>
+					<button id="btn-vaciar-carrito" class="btn-vaciar-carrito">
+						Vaciar Carrito
+					</button>
+					<div class="contenedor-total">
+						<h3 id="titulo-total" class="titulo-total">Total:</h3>
+						<span id="total" class="total"></span>
+					</div>
+					<button id="btn-comprar" class="btn-comprar">
+						Comprar
+					</button>
 				</div>
 			</div>
 		</main>
